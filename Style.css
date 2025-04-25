@@ -256,3 +256,26 @@ button {
 footer {
     padding: 20px 0;
 }
+
+.carrinho-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .icone-carrinho {
+    width: 40px; /* ajuste conforme seu design */
+  }
+  
+  .contador-carrinho {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 2px 6px;
+    font-weight: bold;
+    z-index: 10;
+  }
+  
