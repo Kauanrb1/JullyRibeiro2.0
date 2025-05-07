@@ -11,7 +11,8 @@
     justify-content: space-between; /* Alinha os itens com espaço entre eles */
     align-items: center; /* Centraliza verticalmente os itens */
     width: 100%;
-    font-size: 18px;
+    font-family: "Dancing Script", cursive;
+    font-size: 26px;
     text-align: center; /* Centraliza o texto dentro de cada item */
     padding: 10px; /* Adiciona espaçamento interno */
 }
@@ -19,6 +20,25 @@
 .navbar-gradient {
     background: linear-gradient(90deg, #f9dada, #fa8397);
 }
+
+.navbar-brand{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Dancing Script", cursive;
+    color: var(--CorPrincipal-color);
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: none;
+    padding: 5px;
+  }
+  
 
 .top-bar {
     display: flex;
@@ -81,6 +101,8 @@
   }
   
   footer {
+    margin-top: auto;
+    width: 100%;
     text-align: center;
     padding: 20px;
     background-color: var(--Quinta-color);
