@@ -243,7 +243,7 @@
         transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
-   .btn-comprar {
+   .btnComprar {
         background-color: #ff69b4; /* Cor rosa */
         color: #fff;
         border: none;
@@ -263,7 +263,7 @@
         border: none;
     }
 
-    .btn-comprar:hover {
+    .btnComprar:hover {
         background-color: #ff1493; /* Cor rosa mais escura ao passar o mouse */
         transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
     }
