@@ -52,19 +52,9 @@
       </nav>
         <!--Fim da Barra de navegação-->
 
-        <div class="container">
-            <h1>Carrinho de Compras</h1>
-            <div class="cart-items">
-                <!-- Os itens do carrinho serão adicionados aqui dinamicamente -->
-            </div>
-            <div class="cart-summary">
-                <h2>Resumo do Pedido</h2>
-                <p><strong>Subtotal:</strong> R$<span id="cartSubtotal">0.00</span></p>
-                <p><strong>Impostos:</strong> R$<span id="cartTax">0.00</span></p>
-                <p><strong>Total:</strong> R$<span id="cartTotal">0.00</span></p>
-                <button class="btn" id="checkoutButton">Finalizar Compra</button>
-            </div>
-        </div>
+        <h1>Carrinho de Compras</h1>
+
+        <ul id="cart"></ul>
 
         <!-- Footer-->
       <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -112,6 +102,46 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/dropdown.js"></script>
         <script src="js/Compras.js"></script>
+        <script src="js/cart.js"></script>
+        <script>
+            // Função para exibir os itens do carrinho na página do carrinho
+            function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart'));
+            const cartList = document.getElementById('cart');
+
+            // Limpa o conteúdo atual do carrinho
+            cartList.innerHTML = '';
+
+            // Verifica se há itens no carrinho
+            if (cart && cart.length > 0) {
+                // Loop através de cada item do carrinho e adiciona à lista
+                cart.forEach(item => {
+                const cartItem = document.createElement('li');
+
+                const itemImage = document.createElement('img');
+                itemImage.src = item.image;
+                itemImage.alt = item.name;
+                cartItem.appendChild(itemImage);
+
+                const itemName = document.createElement('p');
+                itemName.textContent = item.name;
+                cartItem.appendChild(itemName);
+
+                const itemPrice = document.createElement('p');
+                itemPrice.textContent = item.price;
+                cartItem.appendChild(itemPrice);
+
+                cartList.appendChild(cartItem);
+                });
+            } else {
+                // Se o carrinho estiver vazio, exibe uma mensagem
+                cartList.innerHTML = '<p>Carrinho vazio</p>';
+            }
+            }
+
+            // Chama a função para exibir os itens do carrinho ao carregar a página
+            window.onload = displayCart;
+        </script>
         
     </body>
 </html> 
