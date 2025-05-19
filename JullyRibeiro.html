@@ -75,11 +75,9 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4 col-md-6 text-center mb-4 col-3">
-                <img onclick="selectProduto('produto5')" style="cursor: pointer;" src="assets/img/produto5.jpeg" class="card-img-top" alt="Produto 5">
+                <img onclick="selectProduto('produto5', 'kit do saptinho com Tiara')" style="cursor: pointer;" src="assets/img/produto5.jpeg" class="card-img-top" alt="Produto 5">
                     <p class="produtoNome">Kit do saptinho com Tiara</p>
-                    
-                    R$110,00
-                        <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
+                    <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
               </div>
               <div class="col-lg-4 col-md-6 text-center mb-4 col-3">
                 <img onclick="window.location.href='Product.html'" style="cursor: pointer;" src="assets/img/produto4.jpeg" class="card-img-top" alt="300px">
@@ -157,7 +155,7 @@
                     <p><i class="fas fa-phone me-3"></i> (075) 99152-4889</p>
                 </div>
             </div>
-        </sec.tion>
+        </section>
     </footer>
     <!-- Footer -->
 
@@ -166,8 +164,9 @@
       <style>@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');</style>
       <script>
         // Função para  ver detlhes do produto
-        function selectProduto(productName) {
-            localStorage.setItem('selectedProduct', productName);
+  function selectProduto(produtoId, produtoNome) {
+            localStorage.setItem('selectedProduct', produtoId);
+            localStorage.setItem('selectedProductName', produtoNome);
             window.location.href = 'Product.html';
         }
        
