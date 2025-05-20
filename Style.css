@@ -362,7 +362,7 @@
 }
 
 .productImage {
-    width: 420px;
+    width: 300px;
     height: 420px;
     object-fit: cover;
     border-radius: 19px;
@@ -384,32 +384,37 @@
     margin: 0;
     width: 16ch;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
     top: 10%; /* Coloca o botão no meio verticalmente */
     min-height: 48px;
     text-align: left;
     min-width: 570px;
 }
+
+    .col-md-8 {
+        padding: 30px;
+    }
+
 .productPrice{
     font-size: 20px;
     margin: 0;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
     top: 20%; /* Coloca o botão no meio verticalmente */
     min-height: 48px;
     text-align: left;
-    min-width: 490px;
+    min-width: 570px;
 }
+
 .btnComprar-mb-3{
 
     position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
     top: 50%; /* Coloca o botão no meio verticalmente */
-    right: 255px; /* Distância da borda direita da imagem */
-    
+
     background: linear-gradient(135deg, #ff69b4, #ff8ac5);
     color: #fff;
     border: none;
@@ -422,10 +427,22 @@
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(255,105,180,0.3);
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
+.stars{
+    margin: -20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
+    top: 10%; /* Coloca o botão no meio verticalmente */
+    min-height: 48px;
+    min-width: 570px;
+    color: #f0f0b9;
+}
+
 
 .btnComprar-mb-3:hover {
     background: linear-gradient(135deg, #ff5bac, #ff7ebd);
@@ -437,4 +454,6 @@
     transform: translateY(0);
     box-shadow: 0 4px 15px rgba(255,105,180,0.3);
 }
+
+
 /* Fim do CSS para o Botão da tela de Product */
