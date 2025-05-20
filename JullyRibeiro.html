@@ -75,36 +75,37 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4 col-md-6 text-center mb-4 col-3">
-                <img onclick="selectProduto('produto5', 'kit do saptinho com Tiara')" style="cursor: pointer;" src="assets/img/produto5.jpeg" class="card-img-top" alt="Produto 5">
-                    <p class="produtoNome">Kit do saptinho com Tiara</p>
+                <img onclick="selectProduto('produto5', 'Kit Sapatinho', '110,00')" style="cursor: pointer;" src="assets/img/produto5.jpeg" class="card-img-top" alt="Produto 5">
+                    <p class="produtoNome">Kit do sapatinho</p>
+                    <p>Preço: R$110,00</p>
                     <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
               </div>
               <div class="col-lg-4 col-md-6 text-center mb-4 col-3">
-                <img onclick="window.location.href='Product.html'" style="cursor: pointer;" src="assets/img/produto4.jpeg" class="card-img-top" alt="300px">
-                    <p class="produtoNome">Faixinha Cloe</p>
+                <img onclick="selectProduto('produto4', 'Vestido Infatil', '12,00')" style="cursor: pointer;" src="assets/img/produto4.jpeg" class="card-img-top" alt="produto 4">
+                    <p class="produtoNome">Vestido Infatil</p>
                     <p>Preço: R$12,00</p>
-                        <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
+                    <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
               </div>
               <div class="col-lg-4 col-md-6 text-center mb-4 col-3">                
-                <img onclick="window.location.href='Product.html'" style="cursor: pointer;" src="assets/img/produto6.jpeg" class="card-img-top" alt="300px">
-                    <p class="produtoNome">Faixinha Olivia</p>
+                <img onclick="selectProduto('produto6', 'Faixinha Oliva', '23,00')" style="cursor: pointer;" src="assets/img/produto6.jpeg" class="card-img-top" alt="300px">
+                    <p class="produtoNome">Faixinha Oliva</p>
                     <p>Preço: R$23,00</p>
-                        <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
+                    <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
               </div>
               <div class="col-lg-4 col-md-6 text-center mb-4 col-3">
-                <img onclick="window.location.href='Product.html'" style="cursor: pointer;" src="assets/img/produto2.jpeg" class="card-img-top" alt="300px">
+                <img onclick="selectProduto('produto2', 'Bolsa juvenil', '89,90')" style="cursor: pointer;" src="assets/img/produto2.jpeg" class="card-img-top" alt="300px">
                     <p class="produtoNome">Bolsa juvenil Eloá</p>
                     <p>Preço: R$89,90</p>
-                        <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
+                    <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
               </div>
               <div class="col-lg-4 col-md-6 text-center mb-4 col-3 product">
-                <img onclick="window.location.href='Product.html'" style="cursor: pointer;" src="assets/img/produto1.jpeg" class="card-img-top" alt="300px">
+                <img onclick="selectProduto('produto1', 'Faixinha Cloe', '12,00')" style="cursor: pointer;" src="assets/img/produto1.jpeg" class="card-img-top" alt="300px">
                     <p class="produtoNome">Faixinha Cloe RN</p>
                     <p>Preço: R$12,00</p>
-                        <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
+                    <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
               </div>
                 <div class="col-lg-4 col-md-6 text-center mb-4 col-3 product">
-                    <img onclick="window.location.href='Product.html'" style="cursor: pointer;" src="assets/img/produto3.jpeg" class="card-img-top" alt="300px">
+                    <img onclick="selectProduto('produto3', 'Vestido menina', '28,00')" style="cursor: pointer;" src="assets/img/produto3.jpeg" class="card-img-top" alt="300px">
                         <p class="produtoNome">Laço Olivia</p>
                         <p>Preço: R$28,00</p>
                         <button class="btnComprar" data-name="Laço" data-price="10">Comprar</button>
@@ -155,7 +156,7 @@
                     <p><i class="fas fa-phone me-3"></i> (075) 99152-4889</p>
                 </div>
             </div>
-        </section>
+        </sec.tion>
     </footer>
     <!-- Footer -->
 
@@ -164,9 +165,10 @@
       <style>@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');</style>
       <script>
         // Função para  ver detlhes do produto
-  function selectProduto(produtoId, produtoNome) {
-            localStorage.setItem('selectedProduct', produtoId);
-            localStorage.setItem('selectedProductName', produtoNome);
+        function selectProduto(productId, productName, productPrice) {
+            localStorage.setItem('selectedProduct', productId);
+            localStorage.setItem('selectedProductName', productName); // Aqui estava faltando!
+            localStorage.setItem('selectedProductPrice', productPrice);
             window.location.href = 'Product.html';
         }
        

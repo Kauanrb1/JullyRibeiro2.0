@@ -349,37 +349,66 @@
 
 /* Inicio do CSS para o Botão da tela de Product */
 
-.productDetails {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    height: 100%; /* Ocupa toda a altura do espaço disponível */
-    gap: 20px; /* Espaço entre o texto e o botão */
-
-    font-weight: bold;
-    font-size: 26px;
-    margin: 0;
-}
-
 
 .mb-3 {
+    padding-top: 30px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1rem;
     background: none;
+    width: 900px;
+    border: none;
 }
 
 .productImage {
-    width: 400px;
-    height: 400px;
+    width: 420px;
+    height: 420px;
     object-fit: cover;
     border-radius: 19px;
     margin-right: 20px;
+}
+
+.productRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Remove flex e alinhamento do parágrafo, deixa só estilo */
+.productDetails {
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0;
+    width: 16ch;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
+    top: 10%; /* Coloca o botão no meio verticalmente */
+    min-height: 48px;
+    text-align: left;
+    min-width: 570px;
+}
+.productPrice{
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
+    top: 20%; /* Coloca o botão no meio verticalmente */
+    min-height: 48px;
+    text-align: left;
+    min-width: 490px;
 }
 .btnComprar-mb-3{
 
     position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
     top: 50%; /* Coloca o botão no meio verticalmente */
-    right: 70px; /* Distância da borda direita da imagem */
+    right: 255px; /* Distância da borda direita da imagem */
     
     background: linear-gradient(135deg, #ff69b4, #ff8ac5);
     color: #fff;
