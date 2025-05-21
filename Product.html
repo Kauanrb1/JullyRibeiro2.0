@@ -68,7 +68,7 @@
       <div class="card-body">
         <div class="productRow">
         <p class="productDetails" id="productDetails"></p>
-        
+        <p class="productDescription" id="descricaoProduto"></p>
         <p class="productPrice" id="productPrice"></p>
         <button class="btn btn-primary btnComprar-mb-3" data-name="Laço" data-price="10">Comprar</button>
         </div>
@@ -140,6 +140,7 @@
             const selectedProduct = localStorage.getItem('selectedProduct');
             const selectedProductName = localStorage.getItem('selectedProductName');
             const selectedProductPrice = localStorage.getItem('selectedProductPrice');
+            const selectedProductDescription = localStorage.getItem('selectedProductDescription');
 
             // Mapeia as imagens para os produtos
             const productImages = {
@@ -155,6 +156,8 @@
             document.getElementById('productDetails').textContent = selectedProductName;
             document.getElementById('productPrice').textContent += ` R$ ${selectedProductPrice}`;
             document.getElementById('productImage').src = productImages[selectedProduct];
+            document.getElementById('descricaoProduto').textContent = localStorage.getItem('selectedProductDescription');
+
 
         </script>
 

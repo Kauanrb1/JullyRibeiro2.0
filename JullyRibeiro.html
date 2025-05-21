@@ -166,9 +166,23 @@
       <script>
         // Função para  ver detlhes do produto
         function selectProduto(productId, productName, productPrice) {
+
+            const descricoes = {
+            'produto5': 'Kit com sapatinho delicado, ideal para ocasiões especiais. Confortável e elegante para bebês.',
+            'produto4': 'Vestido infantil leve e confortável, com design encantador para o dia a dia ou eventos.',
+            'produto6': 'Faixinha Oliva com design floral sofisticado, perfeita para completar o visual com charme.',
+            'produto2': 'Bolsa juvenil Eloá, compacta e estilosa. Ideal para meninas que gostam de praticidade com beleza.',
+            'produto1': 'Faixinha Cloe RN é feita especialmente para recém-nascidas. Super suave e delicada.',
+            'produto3': 'Vestido menina com toque macio e visual encantador. Uma peça perfeita para momentos especiais.'
+        };
+
+
+
             localStorage.setItem('selectedProduct', productId);
             localStorage.setItem('selectedProductName', productName); // Aqui estava faltando!
             localStorage.setItem('selectedProductPrice', productPrice);
+            localStorage.setItem('selectedProductDescription', descricoes[productId] || 'Descrição não disponível');
+
             window.location.href = 'Product.html';
         }
        

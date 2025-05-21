@@ -404,7 +404,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
-    top: 20%; /* Coloca o botão no meio verticalmente */
+    top: 35%; /* Coloca o botão no meio verticalmente */
     min-height: 48px;
     text-align: left;
     min-width: 570px;
@@ -435,12 +435,25 @@
     margin: -20px;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+     justify-content: flex-end;
     position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
     top: 10%; /* Coloca o botão no meio verticalmente */
     min-height: 48px;
     min-width: 570px;
     color: #f0f0b9;
+}
+
+.productDescription {
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute; /* Permite posicionar o botão em relação ao elemento pai */
+    top: 20%; /* Coloca o botão no meio verticalmente */
+    min-height: 48px;
+    text-align: left;
+    min-width: 570px;
 }
 
 
