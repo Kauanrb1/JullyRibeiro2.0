@@ -168,7 +168,16 @@
     }
 
     .container {
-        padding: 10px;
+        width: 80%;
+        padding: 2em;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 20px;
+        
+    }
+
+    .img {
+        max-width: 100%;
+        height: auto;
     }
 
     .linha {
