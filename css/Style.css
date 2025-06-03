@@ -507,7 +507,25 @@
   width: auto;
   object-fit: contain;
 }
-
-
-
 /* Fim do CSS para o Botão da tela de Product */
+
+/*login*/
+
+.login-container, .profile-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* fim do login */
